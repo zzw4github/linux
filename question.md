@@ -1,15 +1,9 @@
-/boot not enough free disk space
-https://linux.cn/article-3335-1.html
-
-sudo add-apt-repository ppa:tualatrix/ppa  
-sudo apt-get update
-sudo apt-get install ubuntu-tweak
-找不到了
-
 删除一个PPA源  
 1,到 源的 目 录:cd  /etc/apt/sources.list.d/
 2,可以看 到 关 于 源的 文件,删除即可 .
 
+
+### no enough free disk /boot
 Usually it means that there are too many old kernels on the boot partition (and the boot partition by default is only about 200MB, so fills up pretty fast).
 
 You can see that by running 
