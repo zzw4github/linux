@@ -43,14 +43,32 @@ sudo mkdir info
 再把info替换回去应该就可以了
 
 -
-rm -rf /etc/nginx/
-rm -rf /usr/sbin/nginx
-rm /usr/share/man/man1/nginx.1.gz
-apt-get remove nginx*
+rm -rf /etc/nginx/  
+rm -rf /usr/sbin/nginx  
+rm /usr/share/man/man1/nginx.1.gz  
+apt-get remove nginx*  
 
 
 - 
 apt-get update  
 apt-get upgrade  
+
+ubuntu中查找软件的安装位置
+
+ubuntu中的软件可通过图形界面的软件中心安装，也可以通过命令行apt-get install安装。但是安装后的软件在哪个位置呢？这点跟windows环境下安装软件的路径选择不一样。ubuntu中可供调用的终端大都在/usr/bin或者/opt，但也不尽然。可尝试用下面的方法快速找到软件的位置。
+
+1.执行该程序；
+
+2.用命令 ps -e 找到该程序的名字；
+
+3.用 find 或 whereis 命令查找文件位置。
+
+此外，如果知道使用apt-get install命令安装的软件，可直接用命令 dpkg -S softwarename 显示包含此软件包的所有位置，dpkg -L softwarename 显示安装路径。
+
+ 
+
+PS：
+
+aptitude show softearename  或 dpkg -l softwarename 查看软件版本
 
 
