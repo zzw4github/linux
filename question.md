@@ -28,4 +28,29 @@ Filesystem Size Used Avail Use% Mounted on
 
 Now run the updater again, and should all work.
 
+- ubuntu 无法sudo apt-get 了
+这个很难讲，可能是依赖关系问题，也可能是源冲突，或者本来源就不好
+
+你sudo apt-get -f install试一下看看
+
+不行的话这样
+
+cd /var/lib/dpkg
+sudo mv info info.bak
+sudo mkdir info
+
+然后apt-get install 或者 apt-get upgrade
+再把info替换回去应该就可以了
+
+-
+rm -rf /etc/nginx/
+rm -rf /usr/sbin/nginx
+rm /usr/share/man/man1/nginx.1.gz
+apt-get remove nginx*
+
+
+- 
+apt-get update  
+apt-get upgrade  
+
 
