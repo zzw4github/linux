@@ -1,3 +1,6 @@
+http://blog.csdn.net/zzxian/article/details/25487951
+
+
 删除一个PPA源  
 1,到 源的 目 录:cd  /etc/apt/sources.list.d/
 2,可以看 到 关 于 源的 文件,删除即可 .
