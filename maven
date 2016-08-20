@@ -1,0 +1,12 @@
+```
+Description Resource Path Location Type Could not calculate build plan: 
+Failure to transfer org.apache.maven.plugins:maven-compiler-plugin:pom:2.0.2 from 
+http://repo1.maven.org/maven2 was cached in the local repository, 
+resolution will not be reattempted until the update interval of central has elapsed or updates are forced. 
+Original error: Could not transfer artifact org.apache.maven.plugins:maven-compiler-plugin:pom:2.0.2 from/to 
+central (http://repo1.maven.org/maven2): No response received after 60000 ExampleProject Unknown Maven Problem
+```
+
+```
+find ~/.m2  -name "*.lastUpdated" -exec grep -q "Could not transfer" {} \; -print -exec rm {} \;
+```
